@@ -1,4 +1,6 @@
 # CodePathPrep
+## Checkpoint 1
+<img src="https://github.com/Orina/CodePathPrep/blob/master/checkpoint1.png"></img>
 
 ## Checkpoint 2
 <img src="https://github.com/Orina/CodePathPrep/blob/master/checkpoint2.png"></img>
