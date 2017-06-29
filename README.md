@@ -16,9 +16,8 @@ Solution
         4. print left vertical line.
   4. return matrix
  
-  time: O(N^2)
-  
-  space: O(N^2)
+  time: O(N^2)  
+  space: O(N^2)  
  
 ## Checkpoint 3
 
@@ -44,8 +43,8 @@ Given an array of non negative integers A, and a range (B, C), find the number o
 Solution: brute-force with 2 loops
 Has to be a better solution, but don't know how to do.
 
-Time: O(N^2)
-Space: O(1)
+Time: O(N^2)  
+Space: O(1)  
  
 ## Checkpoint 4
 
@@ -64,7 +63,7 @@ Solution:
   5. Push to the stack current element.
   6. Reverse the result list (as we go backward)
  
-  time: O(N), as we push/pop one element in stack only once
+  time: O(N), as we push/pop one element in stack only once  
   space: O(N)
 
 ### Subtract
