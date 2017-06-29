@@ -1,7 +1,7 @@
 # CodePathPrep
 
 ## Checkpoint 2
-
+<img src="https://github.com/Orina/CodePathPrep/blob/master/checkpoint2.png"></img>
 ### Prettyprint
 Print concentric rectangular pattern in a 2d matrix.
 
