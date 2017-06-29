@@ -49,7 +49,7 @@ Space: O(1)
 ### NextGreater
 Given an array, find the next greater element G[i] for every element A[i] in the array.
 
-Solution: traverse the array from right to left and if we meet a number A[i] bigger than already seen numbers A[i+1], A[i+2], ..A[N-1], than we are no longer needed for that numbers A[i+1], etc.
+Solution: traverse the array from right to left and if we meet a number A[i] bigger than already seen numbers A[i+1], A[i+2], ..A[N-1], than smallest numbers A[i+1], etc. are no longer needed.
  
   1. Create an empty stack
   2. Traverse initial array from right to left
