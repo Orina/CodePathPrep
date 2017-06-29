@@ -68,10 +68,8 @@ Solution:
 
 ### Subtract
 Given a singly linked list, modify the value of first half nodes such that :
- *
  * 1st node’s new value = the last node’s value - first node’s current value
- * 2nd node’s new value = the second last node’s value - 2nd node’s current value,
- * and so on …
+ * 2nd node’s new value = the second last node’s value - 2nd node’s current value, and so on …
  
   Solution:
   1. find the middle element (use slow and fast pointers)
