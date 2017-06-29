@@ -49,5 +49,70 @@ Space: O(1)
  
 ## Checkpoint 4
 
+### NextGreater
+Given an array, find the next greater element G[i] for every element A[i] in the array.
+
+Solution:
+  Main idea: traverse the array from right to left
+  and if we meet a number A[i] bigger than already seen numbers A[i+1], A[i+2], ..A[N-1],
+  than we are no longer needed for that numbers A[i+1], etc.
+ 
+  1. Create an empty stack
+  2. Traverse initial array from right to left
+  3. Remove from the stack elements which are smaller or equal to the current element
+  4. Add top stack element to the result list (or -1 if stack is empty)
+  5. Push to the stack current element.
+  6. Reverse the result list (as we go backward)
+ 
+  time: O(N), as we push/pop one element in stack only once
+  space: O(N)
+
+### Subtract
+Given a singly linked list, modify the value of first half nodes such that :
+ *
+ * 1st node’s new value = the last node’s value - first node’s current value
+ * 2nd node’s new value = the second last node’s value - 2nd node’s current value,
+ * and so on …
+ 
+  Solution:
+  1. find the middle element (use slow and fast pointers)
+  2. separate the first half of the list from the second part
+  3. reverse the second part of the list
+  4. iterate in tandem the first and reversed second parts, update the values in the first part of the list
+  5. reverse again the second part back to it's initial state
+  6. concat the first and second parts of the list.
+ 
+  time: O(n), n - number of nodes in the list
+  space: O(1)
+ 
 ## Checkpoint 5
 
+### All Unique Permutations
+Given a collection of numbers that might contain duplicates, return all possible unique permutations.
+
+  Main idea: 
+  1. use recursion
+  2. use hash map with key = distinct value
+                       value = count of frequences of that value in the array
+ 
+  time: O(n!)
+  space: O(n)
+
+### Longest Consecutive Sequence
+Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
+
+ Solution:
+  Idea: create a hash map with key = value of elements in the array
+  value = boolean indicates did we already we count the consecutive sequence with that number or not
+ 
+  1. create a hash map and put all elements with false values, as we did not process any element yet
+  2. maintain a global maxCount
+  3. traverse through the array and check every element a[i]
+      1. if element a[i] has "true" value in hash map, this means that we already calculate the count of that consecutive sequence, ignore it
+      2. go to the left side: check if there exists values = a[i]-1, a[i]-2, etc in the hash map, if so, increment the local count and update the hash map for that values
+      3. do the same for the right side.
+      4. compare local max with global max.
+ 4. return global max.
+ 
+  time: O(n)?
+  space: O(n)
