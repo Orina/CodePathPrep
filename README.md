@@ -35,8 +35,8 @@ Idea: As we can't modify the array, we can't do any sorting with it. Therefore w
       2. add current element to the heap
  4. return the top heap element - it will be the k-th smallest element in the initial array
  
-  --time: O(n), n - number of elements in the array
-  --space: O(k), k - given number
+  time: O(n), n - number of elements in the array\n
+  space: O(k), k - given number
  
 ### NumRange
 Given an array of non negative integers A, and a range (B, C), find the number of continuous subsequences in the array which have sum S in the range [B, C] or B <= S <= C
