@@ -16,8 +16,8 @@ Solution
         4. print left vertical line.
   4. return matrix
  
-  time: O(N^2)
-  space: O(N^2)
+  --time: O(N^2)
+  --space: O(N^2)
  
 ## Checkpoint 3
 
@@ -25,8 +25,7 @@ Solution
 Find the kth smallest element in an unsorted array of non-negative integers.
 
 Solution:
-Idea: As we can't modify the array, we can't do any sorting with it
-  Therefore we will use an additional space - heap of size k
+Idea: As we can't modify the array, we can't do any sorting with it. Therefore we will use an additional data structure - max-heap of size k
   
   1. Create an empty heap and add first k-elements to it.
   2. Traverse through the array from a[k]...a[n-1]
@@ -35,8 +34,8 @@ Idea: As we can't modify the array, we can't do any sorting with it
       2. add current element to the heap
  4. return the top heap element - it will be the k-th smallest element in the initial array
  
-  time: O(n), n - number of elements in the array
-  space: O(k), k - given number
+  --time: O(n), n - number of elements in the array
+  --space: O(k), k - given number
  
 ### NumRange
 Given an array of non negative integers A, and a range (B, C), find the number of continuous subsequences in the array which have sum S in the range [B, C] or B <= S <= C
