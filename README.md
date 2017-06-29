@@ -5,8 +5,7 @@
 ### Prettyprint
 Print concentric rectangular pattern in a 2d matrix.
 
-Solution
-
+Solution:
   1. calculate the number of rows/cols as N = 2*a - 1
   2. create an empty matrix (List of List) and populate it with zeroes
   3. print by layer from offset = 0 to a
@@ -24,8 +23,7 @@ Solution
 ### KthSmallest
 Find the kth smallest element in an unsorted array of non-negative integers.
 
-Solution:
-Idea: As we can't modify the array, we can't do any sorting with it. Therefore we will use an additional data structure - max-heap of size k
+Solution: As we can't modify the array, we can't do any sorting with it. Therefore we will use an additional data structure - max-heap of size k
   
   1. Create an empty heap and add first k-elements to it.
   2. Traverse through the array from a[k]...a[n-1]
@@ -51,10 +49,7 @@ Space: O(1)
 ### NextGreater
 Given an array, find the next greater element G[i] for every element A[i] in the array.
 
-Solution:
-  Main idea: traverse the array from right to left
-  and if we meet a number A[i] bigger than already seen numbers A[i+1], A[i+2], ..A[N-1],
-  than we are no longer needed for that numbers A[i+1], etc.
+Solution: traverse the array from right to left and if we meet a number A[i] bigger than already seen numbers A[i+1], A[i+2], ..A[N-1], than we are no longer needed for that numbers A[i+1], etc.
  
   1. Create an empty stack
   2. Traverse initial array from right to left
@@ -98,8 +93,7 @@ Given a collection of numbers that might contain duplicates, return all possible
 ### Longest Consecutive Sequence
 Given an unsorted array of integers, find the length of the longest consecutive elements sequence.
 
- Solution:
-  Idea: create a hash map with key = value of elements in the array
+ Solution: create a hash map with key = value of elements in the array
   value = boolean indicates did we already we count the consecutive sequence with that number or not
  
   1. create a hash map and put all elements with false values, as we did not process any element yet
