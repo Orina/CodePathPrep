@@ -19,7 +19,7 @@ Solution:
   space: O(N^2)  
  
 ## Checkpoint 3
-
+<img src="https://github.com/Orina/CodePathPrep/blob/master/checkpoint3.png"></img>
 ### KthSmallest
 Find the kth smallest element in an unsorted array of non-negative integers.
 
@@ -45,7 +45,7 @@ Time: O(N^2)
 Space: O(1)  
  
 ## Checkpoint 4
-
+<img src="https://github.com/Orina/CodePathPrep/blob/master/checkpoint4.png"></img>
 ### NextGreater
 Given an array, find the next greater element G[i] for every element A[i] in the array.
 
@@ -78,7 +78,7 @@ Given a singly linked list, modify the value of first half nodes such that :
   space: O(1)
  
 ## Checkpoint 5
-
+<img src="https://github.com/Orina/CodePathPrep/blob/master/checkpoint5.png"></img>
 ### All Unique Permutations
 Given a collection of numbers that might contain duplicates, return all possible unique permutations.
 
