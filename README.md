@@ -16,8 +16,9 @@ Solution
         4. print left vertical line.
   4. return matrix
  
-  --time: O(N^2)
-  --space: O(N^2)
+  time: O(N^2)
+  
+  space: O(N^2)
  
 ## Checkpoint 3
 
