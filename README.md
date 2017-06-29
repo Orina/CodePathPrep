@@ -34,7 +34,7 @@ Idea: As we can't modify the array, we can't do any sorting with it. Therefore w
       2. add current element to the heap
  4. return the top heap element - it will be the k-th smallest element in the initial array
  
-  time: O(n), n - number of elements in the array\n
+  time: O(n), n - number of elements in the array  
   space: O(k), k - given number
  
 ### NumRange
@@ -81,7 +81,7 @@ Given a singly linked list, modify the value of first half nodes such that :
   5. reverse again the second part back to it's initial state
   6. concat the first and second parts of the list.
  
-  time: O(n), n - number of nodes in the list
+  time: O(n), n - number of nodes in the list  
   space: O(1)
  
 ## Checkpoint 5
@@ -94,7 +94,7 @@ Given a collection of numbers that might contain duplicates, return all possible
   2. use hash map with key = distinct value
                        value = count of frequences of that value in the array
  
-  time: O(n!)
+  time: O(n!)  
   space: O(n)
 
 ### Longest Consecutive Sequence
@@ -113,5 +113,5 @@ Given an unsorted array of integers, find the length of the longest consecutive 
       4. compare local max with global max.
  4. return global max.
  
-  time: O(n)?
+  time: O(n)?  
   space: O(n)
