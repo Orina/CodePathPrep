@@ -21,7 +21,7 @@ import java.util.PriorityQueue;
  * answer : 2
  *
  * Solution:
- * Idea: As we can't modify the array, we can't do any sorting with it
+ * Idea: As we can't modify the array, we can't do any bucketing_sorting with it
  * Therefore we will use an additional space - heap of size k
  *
  * 1. Create an empty heap and add first k-elements to it.
