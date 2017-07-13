@@ -1,4 +1,4 @@
-package week1.strings;
+package week1.challenges;
 
 /**
  * Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.

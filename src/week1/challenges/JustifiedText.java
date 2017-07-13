@@ -1,4 +1,4 @@
-package week1.strings;
+package week1.challenges;
 
 import java.util.ArrayList;
 import java.util.Arrays;
