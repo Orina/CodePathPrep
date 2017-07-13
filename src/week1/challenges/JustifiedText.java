@@ -37,17 +37,26 @@ public class JustifiedText {
         ArrayList<String> result = new ArrayList();
         int N = a.size();
         int charCount = 0;
+
+        // list of current string indices for justify
         List<Integer> indexes = new ArrayList();
 
         for (int i = 0; i < N; i++) {
             if (charCount + a.get(i).length() > L) {
+
+                //justify text
                 result.add(justifyString(a, indexes, L));
+
+                //clear previous calculations
                 charCount = 0;
                 indexes.clear();
             }
+            //assume that we add a string and one " " space after it
             charCount += a.get(i).length() + 1;
+            //add current index to the list
             indexes.add(i);
         }
+        // justify remaining indices to the left
         if (charCount > 0) {
             result.add(justifyLeft(a, indexes, L));
         }
@@ -73,32 +82,33 @@ public class JustifiedText {
             return justifyLeft(a, indexes, L);
         }
         StringBuilder sb = new StringBuilder();
-        int spaces = indexes.size() - 1;
+        int spacesCount = indexes.size() - 1;
 
         int totalChars = 0;
         for (int index : indexes) totalChars += a.get(index).length();
 
         int remainSpaces = L - totalChars;
 
-        int[] spacesCount = new int[spaces];
-        Arrays.fill(spacesCount, 1);
-        remainSpaces -= spaces;
+        int[] spaceSlot = new int[spacesCount];
+        //assume that at least one space has to be presented between words
+        Arrays.fill(spaceSlot, 1);
+
+        remainSpaces -= spacesCount;
 
         int j = 0;
         while (remainSpaces > 0) {
-            spacesCount[j]++;
+            spaceSlot[j]++;
             j++;
-            if (j == spacesCount.length) j = 0;
+            //nullify index if we reach the end
+            if (j == spaceSlot.length) j = 0;
             remainSpaces--;
         }
-
-        int medianSpaces = Math.min(1, (int) Math.round((L - totalChars) / spaces));
 
         for (int i = 0; i < indexes.size(); i++) {
             sb.append(a.get(indexes.get(i)));
             int spacesToAppend = 0;
-            if (i < spacesCount.length) {
-                spacesToAppend = spacesCount[i];
+            if (i < spaceSlot.length) {
+                spacesToAppend = spaceSlot[i];
             }
             for (int k = 0; k < spacesToAppend; k++) sb.append(' ');
 
