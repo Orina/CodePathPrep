@@ -1,7 +1,6 @@
 package week1.challenges;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -82,36 +81,19 @@ public class JustifiedText {
             return justifyLeft(a, indexes, L);
         }
         StringBuilder sb = new StringBuilder();
-        int spacesCount = indexes.size() - 1;
 
         int totalChars = 0;
         for (int index : indexes) totalChars += a.get(index).length();
 
-        int remainSpaces = L - totalChars;
+        double remainSpaces = L - totalChars;
+        int wordsCount = indexes.size();
 
-        int[] spaceSlot = new int[spacesCount];
-        //assume that at least one space has to be presented between words
-        Arrays.fill(spaceSlot, 1);
-
-        remainSpaces -= spacesCount;
-
-        int j = 0;
-        while (remainSpaces > 0) {
-            spaceSlot[j]++;
-            j++;
-            //nullify index if we reach the end
-            if (j == spaceSlot.length) j = 0;
-            remainSpaces--;
-        }
-
-        for (int i = 0; i < indexes.size(); i++) {
-            sb.append(a.get(indexes.get(i)));
-            int spacesToAppend = 0;
-            if (i < spaceSlot.length) {
-                spacesToAppend = spaceSlot[i];
-            }
+        for (int index : indexes) {
+            sb.append(a.get(index));
+            wordsCount--;
+            int spacesToAppend = (int) Math.ceil(remainSpaces / wordsCount);
             for (int k = 0; k < spacesToAppend; k++) sb.append(' ');
-
+            remainSpaces -= spacesToAppend;
         }
         return sb.toString();
     }
