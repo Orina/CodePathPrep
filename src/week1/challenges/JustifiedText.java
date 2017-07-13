@@ -38,36 +38,36 @@ public class JustifiedText {
         int charCount = 0;
 
         // list of current string indices for justify
-        List<Integer> indexes = new ArrayList();
+        List<Integer> indices = new ArrayList();
 
         for (int i = 0; i < N; i++) {
             if (charCount + a.get(i).length() > L) {
 
                 //justify text
-                result.add(justifyString(a, indexes, L));
+                result.add(justifyString(a, indices, L));
 
                 //clear previous calculations
                 charCount = 0;
-                indexes.clear();
+                indices.clear();
             }
             //assume that we add a string and one " " space after it
             charCount += a.get(i).length() + 1;
             //add current index to the list
-            indexes.add(i);
+            indices.add(i);
         }
         // justify remaining indices to the left
         if (charCount > 0) {
-            result.add(justifyLeft(a, indexes, L));
+            result.add(justifyLeft(a, indices, L));
         }
         return result;
     }
 
-    private String justifyLeft(ArrayList<String> a, List<Integer> indexes, int L) {
+    private String justifyLeft(ArrayList<String> a, List<Integer> indices, int L) {
         StringBuilder sb = new StringBuilder();
 
-        for (int i = 0; i < indexes.size(); i++) {
-            sb.append(a.get(indexes.get(i)));
-            if (i < indexes.size() - 1) sb.append(' ');
+        for (int i = 0; i < indices.size(); i++) {
+            sb.append(a.get(indices.get(i)));
+            if (i < indices.size() - 1) sb.append(' ');
         }
 
         int spacesToAppend = Math.max(0, L - sb.length());
@@ -76,19 +76,19 @@ public class JustifiedText {
         return sb.toString();
     }
 
-    private String justifyString(ArrayList<String> a, List<Integer> indexes, int L) {
-        if (indexes.size() == 1) {
-            return justifyLeft(a, indexes, L);
+    private String justifyString(ArrayList<String> a, List<Integer> indices, int L) {
+        if (indices.size() == 1) {
+            return justifyLeft(a, indices, L);
         }
         StringBuilder sb = new StringBuilder();
 
         int totalChars = 0;
-        for (int index : indexes) totalChars += a.get(index).length();
+        for (int index : indices) totalChars += a.get(index).length();
 
         double remainSpaces = L - totalChars;
-        int wordsCount = indexes.size();
+        int wordsCount = indices.size();
 
-        for (int index : indexes) {
+        for (int index : indices) {
             sb.append(a.get(index));
             wordsCount--;
             int spacesToAppend = (int) Math.ceil(remainSpaces / wordsCount);
