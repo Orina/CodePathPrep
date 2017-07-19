@@ -25,11 +25,11 @@ public class AddBinaryStrings {
         while (i >= 0 || j >= 0) {
             int value = carry;
             if (i >= 0) {
-                value += a.charAt(i)-'0';
+                value += a.charAt(i) - '0';
                 i--;
             }
             if (j >= 0) {
-                value += b.charAt(j)-'0';
+                value += b.charAt(j) - '0';
                 j--;
             }
             sb.append(value % 2);
