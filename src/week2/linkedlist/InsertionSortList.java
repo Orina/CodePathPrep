@@ -17,6 +17,17 @@ package week2.linkedlist;
  */
 public class InsertionSortList {
 
+    /**
+     *  Keep a separate reference to the head of sorted linked list: newHead
+     *
+     *  Traverse through the initial array and for every new node:
+     *  set a reference "sorted" to the head of already sorted linked list
+     *  traverse through the sorted linked list to find the appropriate place to insert current node:
+     *
+     *   1. put the already traversed sorted list's next pointer to current node
+     *   2. put the next pointer of current node point to remaining sorted part
+     *
+     */
     public ListNode insertionSortList(ListNode a) {
         if(a==null || a.next==null) return a;
 
