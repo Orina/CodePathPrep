@@ -14,6 +14,7 @@ import java.util.HashMap;
 public class LongestnNonRepeatingSubstring {
 
     public int lengthOfLongestSubstring(String a) {
+        a.hashCode();
         if (a == null || a.length() == 0) return 0;
         int curLength = 0, maxLength = 0;
         int N = a.length();
