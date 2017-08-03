@@ -45,7 +45,7 @@ public class HotelReviews {
      * Construct a trie based on a collection of good words
      *
      * for each review:
-     * count how many hits it have in trie
+     * count how many hits it have in a trie
      * store the pair {index of the review, hits count} in the list
      *
      * sort the list of pairs based on hits count using insertion sort
